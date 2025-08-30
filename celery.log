@@ -1,0 +1,220 @@
+2025-08-07 16:52:29,197 - celery.worker.consumer.connection - INFO - Connected to redis://192.168.248.130:6379/1
+2025-08-07 16:52:29,203 - celery.worker.consumer.mingle - INFO - mingle: searching for neighbors
+2025-08-07 16:52:30,230 - celery.worker.consumer.mingle - INFO - mingle: all alone
+2025-08-07 16:52:30,254 - celery.apps.worker - INFO - celery@DESKTOP-QITR3KV ready.
+2025-08-07 16:52:30,260 - celery.worker.pidbox - INFO - pidbox: Connected to redis://192.168.248.130:6379/1.
+2025-08-07 16:52:38,279 - celery.worker.strategy - INFO - Task oaback.celery.debug_task[beaf94a6-8f68-4e78-ac2d-613429295c19] received
+2025-08-07 16:52:38,280 - celery.redirected - WARNING - Request: <Context: {'lang': 'py', 'task': 'oaback.celery.debug_task', 'id': 'beaf94a6-8f68-4e78-ac2d-613429295c19', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'beaf94a6-8f68-4e78-ac2d-613429295c19', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen14216@DESKTOP-QITR3KV', 'ignore_result': True, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'properties': {'correlation_id': 'beaf94a6-8f68-4e78-ac2d-613429295c19', 'reply_to': 'd1e12138-306f-3939-8b47-9c82cc17ffe4', 'delivery_mode': 2, 'delivery_info': {'exchange': '', 'routing_key': 'celery'}, 'priority': 0, 'body_encoding': 'base64', 'delivery_tag': '7637ec64-1fe8-4edf-9d68-f942cf0bca3a'}, 'reply_to': 'd1e12138-306f-3939-8b47-9c82cc17ffe4', 'correlation_id': 'beaf94a6-8f68-4e78-ac2d-613429295c19', 'hostname': 'celery@DESKTOP-QITR3KV', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': False}, 'args': [], 'kwargs': {}, 'is_eager': False, 'callbacks': None, 'errbacks': None, 'chain': None, 'chord': None, 'called_directly': False, 'headers': None, '_protected': 1}>
+2025-08-07 16:52:38,286 - celery.redirected - WARNING - xxxxxxxxxxxxxxxxxxx
+2025-08-07 16:52:38,299 - celery.app.trace - INFO - Task oaback.celery.debug_task[beaf94a6-8f68-4e78-ac2d-613429295c19] succeeded in 0.019254300000284275s: None
+2025-08-07 16:53:00,291 - py.warnings - WARNING - D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\concurrency\gevent.py:57: UserWarning: libuv only supports millisecond timer resolution; all times less will be set to 1 ms
+  g = self._Greenlet.spawn_later(secs, entry)
+
+2025-08-07 17:19:50,111 - celery.worker.consumer.connection - INFO - Connected to redis://192.168.248.130:6379/1
+2025-08-07 17:19:50,116 - celery.worker.consumer.mingle - INFO - mingle: searching for neighbors
+2025-08-07 17:19:51,147 - celery.worker.consumer.mingle - INFO - mingle: all alone
+2025-08-07 17:19:51,167 - celery.worker.pidbox - INFO - pidbox: Connected to redis://192.168.248.130:6379/1.
+2025-08-07 17:19:51,168 - celery.apps.worker - INFO - celery@DESKTOP-QITR3KV ready.
+2025-08-07 17:20:03,230 - celery.worker.strategy - INFO - Task send_mail_task[c59997d1-6a03-469f-a255-a0eb6113c18f] received
+2025-08-07 17:20:04,259 - celery.app.trace - INFO - Task send_mail_task[c59997d1-6a03-469f-a255-a0eb6113c18f] succeeded in 1.0274053000002823s: None
+2025-08-07 17:22:21,363 - py.warnings - WARNING - D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\concurrency\gevent.py:57: UserWarning: libuv only supports millisecond timer resolution; all times less will be set to 1 ms
+  g = self._Greenlet.spawn_later(secs, entry)
+
+2025-08-07 17:25:14,579 - celery.worker.consumer.consumer - WARNING - consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\worker\consumer\consumer.py", line 341, in start
+    blueprint.start(self)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\bootsteps.py", line 116, in start
+    step.start(parent)
+    ~~~~~~~~~~^^^^^^^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\worker\consumer\consumer.py", line 772, in start
+    c.loop(*c.loop_args())
+    ~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\worker\loops.py", line 143, in synloop
+    _loop_cycle()
+    ~~~~~~~~~~~^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\worker\loops.py", line 132, in _loop_cycle
+    connection.drain_events(timeout=2.0)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\connection.py", line 341, in drain_events
+    return self.transport.drain_events(self.connection, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\virtual\base.py", line 997, in drain_events
+    get(self._deliver, timeout=timeout)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\redis.py", line 598, in get
+    ret = self.handle_event(fileno, event)
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\redis.py", line 580, in handle_event
+    return self.on_readable(fileno), self
+           ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\redis.py", line 576, in on_readable
+    chan.handlers[type]()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\redis.py", line 974, in _brpop_read
+    dest__item = self.client.parse_response(self.client.connection,
+                                            'BRPOP',
+                                            **options)
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\client.py", line 584, in parse_response
+    response = connection.read_response()
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\connection.py", line 592, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\_parsers\resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\_parsers\resp2.py", line 25, in _read_response
+    raw = self._buffer.readline()
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\_parsers\socket.py", line 115, in readline
+    self._read_from_socket()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\_parsers\socket.py", line 68, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2025-08-07 17:25:22,656 - py.warnings - WARNING - D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\worker\consumer\consumer.py:392: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered
+back to the queue. You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss
+setting. In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+2025-08-07 17:25:22,656 - celery.worker.consumer.consumer - INFO - Temporarily reducing the prefetch count to 4 to avoid over-fetching since 0 tasks are currently being processed.
+The prefetch count will be gradually restored to 0 as the tasks complete processing.
+2025-08-07 17:25:22,658 - celery.redirected - WARNING - Traceback (most recent call last):
+2025-08-07 17:25:22,661 - celery.redirected - WARNING -   File "src/gevent/_waiter.py", line 122, in gevent._gevent_c_waiter.Waiter.switch
+2025-08-07 17:25:22,661 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\worker\pidbox.py", line 118, in loop
+    connection.drain_events(timeout=1.0)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-08-07 17:25:22,661 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\connection.py", line 341, in drain_events
+    return self.transport.drain_events(self.connection, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-07 17:25:22,662 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\virtual\base.py", line 997, in drain_events
+    get(self._deliver, timeout=timeout)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-07 17:25:22,662 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\redis.py", line 598, in get
+    ret = self.handle_event(fileno, event)
+2025-08-07 17:25:22,662 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\redis.py", line 580, in handle_event
+    return self.on_readable(fileno), self
+           ~~~~~~~~~~~~~~~~^^^^^^^^
+2025-08-07 17:25:22,663 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\redis.py", line 576, in on_readable
+    chan.handlers[type]()
+    ~~~~~~~~~~~~~~~~~~~^^
+2025-08-07 17:25:22,663 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\redis.py", line 925, in _receive
+    ret.append(self._receive_one(c))
+               ~~~~~~~~~~~~~~~~~^^^
+2025-08-07 17:25:22,663 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\kombu\transport\redis.py", line 935, in _receive_one
+    response = c.parse_response()
+2025-08-07 17:25:22,663 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\client.py", line 865, in parse_response
+    response = self._execute(conn, try_read)
+2025-08-07 17:25:22,663 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\client.py", line 841, in _execute
+    return conn.retry.call_with_retry(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        lambda: command(*args, **kwargs),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        lambda error: self._disconnect_raise_connect(conn, error),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+2025-08-07 17:25:22,664 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\retry.py", line 65, in call_with_retry
+    fail(error)
+    ~~~~^^^^^^^
+2025-08-07 17:25:22,664 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\client.py", line 843, in <lambda>
+    lambda error: self._disconnect_raise_connect(conn, error),
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-08-07 17:25:22,664 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\client.py", line 830, in _disconnect_raise_connect
+    raise error
+2025-08-07 17:25:22,664 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\retry.py", line 62, in call_with_retry
+    return do()
+2025-08-07 17:25:22,665 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\client.py", line 842, in <lambda>
+    lambda: command(*args, **kwargs),
+            ~~~~~~~^^^^^^^^^^^^^^^^^
+2025-08-07 17:25:22,665 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\client.py", line 863, in try_read
+    return conn.read_response(disconnect_on_error=False, push_request=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-07 17:25:22,665 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\connection.py", line 592, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+2025-08-07 17:25:22,665 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\_parsers\resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+2025-08-07 17:25:22,665 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\_parsers\resp2.py", line 25, in _read_response
+    raw = self._buffer.readline()
+2025-08-07 17:25:22,666 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\_parsers\socket.py", line 115, in readline
+    self._read_from_socket()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+2025-08-07 17:25:22,666 - celery.redirected - WARNING -   File "D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\redis\_parsers\socket.py", line 68, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+2025-08-07 17:25:22,666 - celery.redirected - WARNING - redis.exceptions.ConnectionError: Connection closed by server.
+2025-08-07 17:25:22,666 - celery.redirected - WARNING - 2025-08-07T09:25:22Z
+2025-08-07 17:25:22,666 - celery.redirected - WARNING -  
+2025-08-07 17:25:22,667 - celery.redirected - WARNING - <built-in method switch of gevent._gevent_c_greenlet_primitives.TrackedRawGreenlet object at 0x0000020F8BC23F80> failed with ConnectionError
+2025-08-07 17:26:04,786 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 2.00 seconds... (1/100)
+
+2025-08-07 17:26:27,822 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 4.00 seconds... (2/100)
+
+2025-08-07 17:26:52,867 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 6.00 seconds... (3/100)
+
+2025-08-07 17:27:19,908 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 8.00 seconds... (4/100)
+
+2025-08-07 17:27:48,958 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 10.00 seconds... (5/100)
+
+2025-08-07 17:28:20,006 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 12.00 seconds... (6/100)
+
+2025-08-07 17:28:53,042 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 14.00 seconds... (7/100)
+
+2025-08-07 17:29:28,078 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 16.00 seconds... (8/100)
+
+2025-08-07 17:30:05,149 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 18.00 seconds... (9/100)
+
+2025-08-07 17:30:44,198 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 20.00 seconds... (10/100)
+
+2025-08-07 17:31:25,261 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 22.00 seconds... (11/100)
+
+2025-08-07 17:32:08,301 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 24.00 seconds... (12/100)
+
+2025-08-07 17:32:53,341 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 26.00 seconds... (13/100)
+
+2025-08-07 22:49:32,446 - celery.worker.consumer.connection - INFO - Connected to redis://192.168.248.130:6379/1
+2025-08-07 22:49:32,452 - celery.worker.consumer.mingle - INFO - mingle: searching for neighbors
+2025-08-07 22:49:33,517 - celery.worker.consumer.mingle - INFO - mingle: all alone
+2025-08-07 22:49:33,533 - celery.apps.worker - INFO - celery@DESKTOP-QITR3KV ready.
+2025-08-07 22:49:33,538 - celery.worker.pidbox - INFO - pidbox: Connected to redis://192.168.248.130:6379/1.
+2025-08-07 22:49:43,532 - py.warnings - WARNING - D:\code_py\.virtualenvs\.django-venv\Lib\site-packages\celery\concurrency\gevent.py:57: UserWarning: libuv only supports millisecond timer resolution; all times less will be set to 1 ms
+  g = self._Greenlet.spawn_later(secs, entry)
+
+2025-08-07 22:50:33,821 - celery.worker.strategy - INFO - Task send_mail_task[76fdf369-3b47-4c42-920e-706c45403fae] received
+2025-08-07 22:50:35,288 - celery.app.trace - INFO - Task send_mail_task[76fdf369-3b47-4c42-920e-706c45403fae] succeeded in 1.46617040000001s: None
+2025-08-08 00:07:23,192 - celery.worker.strategy - INFO - Task send_mail_task[9231522a-4ee7-4576-90a6-6b53699d47c3] received
+2025-08-08 00:07:26,260 - celery.app.trace - INFO - Task send_mail_task[9231522a-4ee7-4576-90a6-6b53699d47c3] succeeded in 3.0615858000001026s: None
+2025-08-10 15:52:02,624 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 2.00 seconds... (1/100)
+
+2025-08-10 15:52:25,680 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 4.00 seconds... (2/100)
+
+2025-08-10 15:52:50,716 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 6.00 seconds... (3/100)
+
+2025-08-10 15:53:17,764 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 8.00 seconds... (4/100)
+
+2025-08-10 15:53:46,802 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 10.00 seconds... (5/100)
+
+2025-08-10 15:54:17,852 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 12.00 seconds... (6/100)
+
+2025-08-10 15:54:50,898 - celery.worker.consumer.consumer - ERROR - consumer: Cannot connect to redis://192.168.248.130:6379/1: Timeout connecting to server.
+Trying again in 14.00 seconds... (7/100)
+

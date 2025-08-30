@@ -1,0 +1,6 @@
+.env
+.venv
+.idea
+
+# 额外无关的文件
+algorithm
