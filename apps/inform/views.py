@@ -56,7 +56,7 @@ class ReadInformView(APIView):
                 return Response(status=status.HTTP_200_OK)
             else:
                 try:
-                    InformRead.objects.post()
+                    InformRead.objects.create(inform_id=inform_pk, user_id=request.user.uid)
                 except Exception as e:
                     print(e)
                     return Response(data={'detail': '阅读失败!'}, status=status.HTTP_400_BAD_REQUEST)

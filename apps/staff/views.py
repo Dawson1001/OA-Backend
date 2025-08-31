@@ -2,8 +2,6 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from urllib import parse
 
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_protect
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status, generics, exceptions, viewsets, mixins
@@ -64,7 +62,6 @@ class ActiveStaffView(View):
         response.set_cookie('token', token)
         return response
 
-    # @method_decorator(csrf_protect, name="dispatch")
     def post(self, request):
         try:
             token = request.COOKIES['token']

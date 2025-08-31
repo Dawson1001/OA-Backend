@@ -24,14 +24,14 @@ class InformSerializer(serializers.ModelSerializer):
         read_only_fields = ['public']
 
     def create(self, validated_data):
-        requset = self.context.get('request')
+        request = self.context.get('request')
         department_ids = validated_data.pop('department_ids')
         department_ids = list(map(lambda value: int(value), department_ids))
         if 0 in department_ids:
-            inform = Inform.objects.post(**validated_data)
+            inform = Inform.objects.create(public=True, author=request.user, **validated_data)
         else:
             departments = OADepartment.objects.filter(id__in=department_ids)
-            inform = Inform.objects.post(**validated_data)
+            inform = Inform.objects.create(public=False, author=request.user, **validated_data)
             inform.departments.set(departments)
             inform.save()
         return inform

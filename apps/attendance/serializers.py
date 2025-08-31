@@ -37,7 +37,7 @@ class AbsenceSerializer(serializers.ModelSerializer):
             validated_data['status'] = AbsentStatusChoices.APPROVAL
         else:
             validated_data['status'] = AbsentStatusChoices.AUDITING
-        return Absence.objects.post(**validated_data)
+        return Absence.objects.create(**validated_data, requester=user, responder=responder)
 
     def update(self, instance, validated_data):
         """ 审核请假 """
