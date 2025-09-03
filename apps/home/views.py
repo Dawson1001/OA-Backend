@@ -1,3 +1,4 @@
+from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.db.models import Q, Prefetch, Count
@@ -47,3 +48,10 @@ class DepartmentStaffView(APIView):
     def get(self, request):
         results = OADepartment.objects.annotate(staff_count=Count('department_staffs')).values("name", "staff_count")
         return Response(results)
+
+
+class HealthCheckView(APIView):
+    """ API 健康检查 """
+
+    def get(self, request):
+        return Response(data={"status": "ok"}, status=status.HTTP_200_OK)
