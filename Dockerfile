@@ -1,5 +1,5 @@
 # 基础镜像
-FROM python:3.13.3
+FROM docker.xuanyuan.me/python:3.13.3
 
 # 将当前目录下的所有文件都拷贝至容器的 /www 目录下
 COPY . /www/
@@ -11,7 +11,7 @@ WORKDIR /www
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 
 # 安装 uwsgi
-RUN pip install uwsgi==2.0.25.1 -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip install uwsgi -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 RUN mkdir -p /data/log
 RUN mkdir -p /data/sock

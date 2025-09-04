@@ -1,6 +1,7 @@
 .env
 .venv
 .idea
+compose.yaml
 
 # 额外无关的文件
 algorithm
