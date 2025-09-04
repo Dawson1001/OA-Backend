@@ -19,7 +19,9 @@ class LoginCheckMiddleware(MiddlewareMixin):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.white_list = [reverse("oaauth:login"), reverse("staff:active_staff")]
+        self.white_list = [reverse("oaauth:login"),
+                           reverse("staff:active_staff"),
+                           reverse("home:health_check")]
 
     def process_view(self, request, view_func, view_args, view_kwargs):
         if request.path in self.white_list or request.path.startswith(settings.MEDIA_URL):
